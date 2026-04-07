@@ -8,7 +8,7 @@ async function generate() {
 
   document.getElementById("output").innerText = "Generating...";
 
-  const res = await fetch("http://localhost:3000/generate", {
+  const res = await fetch("https://ai-chatbot-backend-5it0.onrender.com/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
