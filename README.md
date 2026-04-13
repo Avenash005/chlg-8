@@ -60,6 +60,8 @@ This project includes an AI-powered feature to improve user interaction.
 
 ```bash
 git clone https://github.com/Avenash005/chlg-8.git
+
+////
 cd chlg-8/frontend
 npm install
 npm run dev
