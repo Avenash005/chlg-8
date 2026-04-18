@@ -35,5 +35,5 @@ Monthly total:
 200 × 0.00030 = $0.06  
 
 ## Live Deployment
-Frontend: https://your-frontend-url  
-Backend: https://your-backend-url
+Frontend: https://chlg-8.vercel.app 
+Backend: https://ai-chatbot-backend-5it0.onrender.com
