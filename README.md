@@ -1,67 +1,39 @@
-# 🚀 CHLG-8 Frontend
+# PR Description Generator
 
-## 📌 Problem Statement
+## The Problem
+I kept writing very poor PR descriptions after finishing features. My team lead rejected them because they lacked clarity. I wasted time rewriting them manually every time.
 
-Many applications lack an intuitive and responsive frontend that efficiently communicates with backend services. Additionally, users often face difficulty in interacting with systems that do not provide intelligent assistance.
+## What It Does
+User pastes git diff → AI converts it into structured PR description → user gets clean output instantly.
 
-This project solves that problem by:
-- Providing a clean and responsive UI
-- Integrating API-based communication
-- Enhancing user experience using AI-powered features
+## AI Integration
+API: OpenRouter  
+Model: openai/gpt-4o-mini  
+Location: backend/server.js → generateDescription()  
+What AI does: Converts raw git diff into structured PR description  
 
----
+## What I Intentionally Excluded
+- No authentication → not needed for single-use tool
+- No database → no need to store data
+- No history feature → keeps scope simple
 
-## 🤖 AI Integration
+## Monthly Cost Calculation
+Model: openai/gpt-4o-mini  
+Input: $0.15 per 1M tokens  
+Output: $0.60 per 1M tokens  
 
-This project includes an AI-powered feature to improve user interaction.
+Avg tokens per call: ~800 input + ~300 output  
 
-### 🔹 What AI does:
-- Processes user input dynamically
-- Generates intelligent responses (e.g., suggestions / content / automation)
-- Enhances UX by reducing manual effort
+Cost per call:
+(800/1,000,000 × 0.15) + (300/1,000,000 × 0.60)  
+= 0.00012 + 0.00018  
+= 0.00030  
 
-### 🔹 Example Use Case:
-- User enters input → AI processes → returns smart output
+Expected calls/month: 200  
 
-### 🔹 Tools Used:
-- OpenAI API / AI SDK (update based on what you used)
+Monthly total:
+200 × 0.00030 = $0.06  
 
----
-
-## 💰 Monthly Cost Estimation
-
-| Service        | Usage                | Estimated Cost |
-|----------------|---------------------|----------------|
-| OpenAI API     | ~X requests/month   | $X             |
-| Hosting (Vercel/Netlify) | Free tier / Paid | $0 - $10       |
-| Backend Server | Optional            | $5 - $20       |
-
-👉 **Total Estimated Cost:** `$X - $X / month`
-
-### What the video covers:
-- Project overview
-- Problem explanation
-- AI feature demo
-- Code walkthrough
-
----
-
-## 🛠️ Tech Stack
-
-- React.js
-- JavaScript (ES6+)
-- CSS / Tailwind
-- Axios / Fetch API
-- Vite
-
----
-
-## ⚙️ Installation & Setup
-
-```bash
-git clone https://github.com/Avenash005/chlg-8.git
-
-////
-cd chlg-8/frontend
-npm install
-npm run dev
+## Live Deployment
+Frontend: https://chlg-8.vercel.app 
+Backend: https://ai-chatbot-backend-5it0.onrender.com
